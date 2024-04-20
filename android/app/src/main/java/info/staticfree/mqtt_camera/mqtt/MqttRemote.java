@@ -181,7 +181,7 @@ public class MqttRemote {
 
     @NonNull
     private String getMqttSubTopic(@NonNull String subTopic) {
-        return "camera/" + uuid + '/' + subTopic;
+        return "b6510545608/"+ "camera/" + uuid + '/' + subTopic;
     }
 
     private void onMqttMessage(@NonNull String topic, @NonNull MqttMessage message) {

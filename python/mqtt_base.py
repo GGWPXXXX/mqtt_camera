@@ -13,7 +13,11 @@ class MQTTBase():
             self.mqtt_config = config
         else:
             raise Exception("must provide a configuration")
+<<<<<<< HEAD
         self.mqtt = paho.Client()
+=======
+        self.mqtt = paho.Client(paho.CallbackAPIVersion.VERSION1)
+>>>>>>> main
         self.mqtt.on_connect = self.on_connect
         self.mqtt.on_message = self.on_message
         self.mqtt.on_disconnect = self.on_disconnect

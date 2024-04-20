@@ -11,8 +11,13 @@ class ImageSaver(MQTTBase):
         MQTTBase.__init__(self, config_file=config_file)
 
     def on_connect(self, client, userdata, flags, conn_result):
+<<<<<<< HEAD
         self.mqtt.subscribe('camera/#')
         self.mqtt.publish('saver/status', 'connected', 0, True)
+=======
+        self.mqtt.subscribe('camera/617aa97d-0da5-46c4-ac97-5b3ed6360778/image')
+        self.mqtt.publish('camera/617aa97d-0da5-46c4-ac97-5b3ed6360778/status', 0)
+>>>>>>> main
         print("Connected. Listening for images on camera/#/image")
 
     def on_message(self, client, userdata, message):
